@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-   BuzzlogixTextAnalysisAPILib.Controllers.TwittersentimentController
+   BuzzlogixTextAnalysisAPILib.Controllers.KeywordsController
 
    This file was automatically generated for Buzzlogix by APIMATIC BETA v2.0 on 11/18/2015
 """
@@ -12,7 +12,7 @@ from BuzzlogixTextAnalysisAPILib.Configuration import Configuration
 from BuzzlogixTextAnalysisAPILib.APIException import APIException
 
 
-class TwittersentimentController(object):
+class KeywordsController(object):
 
 
     """A Controller to access Endpoints in the BuzzlogixTextAnalysisAPILib API."""
@@ -24,11 +24,11 @@ class TwittersentimentController(object):
         """
         self.__apikey = apikey
 
-    def create_return_english_twitter_sentiment(self,
-                                                body):
-        """Does a POST request to /twittersentiment.
+    def create_return_english_keywords(self,
+                                       body):
+        """Does a POST request to /keywords.
 
-        The Tweet should be provided as text/plain in the body
+        The text should be provided as text/plain in the body
 
         Args:
             body (string): Supply text to be classified.
@@ -47,7 +47,7 @@ class TwittersentimentController(object):
         query_builder = Configuration.BASE_URI
  
         # Prepare query string for API call
-        query_builder += "/twittersentiment"
+        query_builder += "/keywords"
 
         # Validate and preprocess url
         query_url = APIHelper.clean_url(query_builder)
@@ -77,14 +77,16 @@ class TwittersentimentController(object):
         
         return response.body
 
-    def create_return_english_twitter_sentiment_form(self,
-                                                     body):
-        """Does a POST request to /twittersentiment/form.
+    def create_return_english_keywords_form(self,
+                                            apikey,
+                                            body):
+        """Does a POST request to /keywords/form.
 
-        The Tweet should be provided as multipart/form-data with the key
+        The text should be provided as multipart/form-data with the key
         'text'. Files can be uploaded.
 
         Args:
+            apikey (string): Supply your API key.
             body (string): Supply text to be classified.
 
         Returns:
@@ -101,7 +103,7 @@ class TwittersentimentController(object):
         query_builder = Configuration.BASE_URI
  
         # Prepare query string for API call
-        query_builder += "/twittersentiment/form"
+        query_builder += "/keywords/form"
 
         # Validate and preprocess url
         query_url = APIHelper.clean_url(query_builder)
@@ -110,7 +112,8 @@ class TwittersentimentController(object):
         headers = {
 
             "apikey": self.__apikey,            "user-agent": "APIMATIC 2.0",
-            "accept": "application/json"            "apikey": self.__apikey
+            "accept": "application/json"            "apikey": apikey,
+            "apikey": self.__apikey
         }
 
         # Prepare and invoke the API call request to fetch the response

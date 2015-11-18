@@ -8,7 +8,7 @@ It will not work using Python 3.x
 How To Configure:
 =================
 The generated code might need to be configured with your API credentials. To do that,
-open the file "Configuration.py" and edit its contents.
+provide the credentials and configuration values as constructor parameters for the controllers
 
 How To Build: 
 =============
@@ -23,22 +23,22 @@ Note: You will need internet access to resolve these dependencies.
 
 How To Use:
 ===========
-The following shows how to make invoke the ObjectivityController controller.
+The following shows how to make invoke the TwittersentimentController controller.
 It is also shown in [2].
 
-    1. Create a "ObjectivityControllerTest.py" file in the root directory.
+    1. Create a "TwittersentimentControllerTest.py" file in the root directory.
     2. Add the following import statement 
-        'from BuzzlogixTextAnalysisAPILib.Controllers.ObjectivityController import *'
-    3. Create a new instance using 'controller = ObjectivityController()'
+        'from BuzzlogixTextAnalysisAPILib.Controllers.TwittersentimentController import *'
+    3. Create a new instance using 'controller = TwittersentimentController()'
     4. Invoke an endpoint with the appropriate parameters, for example
-        'response = controller.create_return_objectivity(<required parameters if any>)'
-    5. "response" will now be an object of type Void.
+        'response = controller.create_return_english_twitter_sentiment(<required parameters if any>)'
+    5. "response" will now be an object of type Dynamic.
 
 [1] PIP - https://pip.pypa.io
 
-[2] from BuzzlogixTextAnalysisAPILib.Controllers.ObjectivityController import *
+[2] from BuzzlogixTextAnalysisAPILib.Controllers.TwittersentimentController import *
 
-	controller = ObjectivityController()
-    response = controller.create_return_objectivity()
+	controller = TwittersentimentController()
+    response = controller.create_return_english_twitter_sentiment()
 
     print response
