@@ -3,7 +3,7 @@
 """
    BuzzlogixTextAnalysisAPILib.Controllers.KeywordsController
 
-   This file was automatically generated for Buzzlogix by APIMATIC BETA v2.0 on 11/18/2015
+   This file was automatically generated for buzzlogix by APIMATIC BETA v2.0 on 11/25/2015
 """
 import unirest
 
@@ -78,7 +78,6 @@ class KeywordsController(object):
         return response.body
 
     def create_return_english_keywords_form(self,
-                                            apikey,
                                             body):
         """Does a POST request to /keywords/form.
 
@@ -86,7 +85,6 @@ class KeywordsController(object):
         'text'. Files can be uploaded.
 
         Args:
-            apikey (string): Supply your API key.
             body (string): Supply text to be classified.
 
         Returns:
@@ -112,8 +110,7 @@ class KeywordsController(object):
         headers = {
 
             "apikey": self.__apikey,            "user-agent": "APIMATIC 2.0",
-            "accept": "application/json"            "apikey": apikey,
-            "apikey": self.__apikey
+            "accept": "application/json"            "apikey": self.__apikey
         }
 
         # Prepare and invoke the API call request to fetch the response
