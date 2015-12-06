@@ -31,7 +31,7 @@ It is also shown in [2].
         'from BuzzlogixTextAnalysisAPILib.Controllers.TwittersentimentController import *'
     3. Create a new instance using 'controller = TwittersentimentController()'
     4. Invoke an endpoint with the appropriate parameters, for example
-        'response = controller.create_return_english_twitter_sentiment(<required parameters if any>)'
+        'response = controller.create_return_english_twitter_sentiment_plaintext(<required parameters if any>)'
     5. "response" will now be an object of type Dynamic.
 
 [1] PIP - https://pip.pypa.io
@@ -39,6 +39,6 @@ It is also shown in [2].
 [2] from BuzzlogixTextAnalysisAPILib.Controllers.TwittersentimentController import *
 
 	controller = TwittersentimentController()
-    response = controller.create_return_english_twitter_sentiment()
+    response = controller.create_return_english_twitter_sentiment_plaintext()
 
     print response
